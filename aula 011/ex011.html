@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIDADANIA</title>
+    <style>
+        body {
+            background-color: rgb(181, 250, 243);
+        }
+        div#res {
+            background-color: yellow;
+            font: normal 20px Arial;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PORTAL DA CIDADANIA</h1> 
+    <P>Qual o seu país de origem :</P>
+    <input type="text" name="origem" id="origem">
+    <input type="button" value="verificar" onclick="verificar()">
+    
+    <div id="res"></div>
+     <script>
+         function verificar() {
+            var origem = document.querySelector('input#origem')
+            var res = document.querySelector('div#res')
+            var origem = String(origem.value)
+            if (origem == 'Brasil') {
+                res.innerHTML = `Seu país de origem é ${origem}, você é <STRONG>BRASILEIRO</STRONG>`
+            } else { 
+                res.innerHTML = `Seu país de origem é ${origem}, você é <strong>ESTRANGEIRO</strong>`
+            }
+
+            
+         }
+         
+
+         
+     </script>
+
+</body>
+</html>
